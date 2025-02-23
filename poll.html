@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Widget</title>
+    <script type="module" defer src="dist/assets/index-BAhiqljR.js"></script>
+    <link rel="stylesheet" href="dist/assets/index-C5EU6OpA.css">
+</head>
+<body>
+
+    <div style="width: 50%;margin:auto" id="poll-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Now PollWidget is globally available and can be used here
+            PollWidget.render({
+                elementId: "poll-container",
+                pollId: "poll1",
+                question: "How do you feel today?",
+                options: [
+                "Brilliant! I have so much energy",
+                "Always can be worse.",
+                "Please, end my misery."
+                ]            
+        });
+        });
+    </script>
+</body>
+</html>
