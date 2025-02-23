@@ -19,8 +19,8 @@ This is a simple and customizable **React-based poll widget** that can be embedd
 ## 🛠️ Installation & Setup
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-repo/poll-widget.git
-cd poll-widget
+https://github.com/gavandivya/poll-demo.git
+cd poll-demo
 ```
 
 ### **2️⃣ Install Dependencies**
@@ -30,9 +30,9 @@ npm install
 
 ### **3️⃣ Run the Development Server**
 ```sh
-npm start
+npm run dev
 ```
-This will start the app at `http://localhost:3000/`.
+This will start the app at `http://localhost:5173/`.
 
 ### **4️⃣ Build for Production**
 To generate a **minified version** of the poll widget, run:
@@ -46,12 +46,12 @@ This will create a `build/` folder with optimized assets.
 ## 📌 Embedding the Widget in an HTML Page
 Once the build is ready, you can embed the poll widget in any HTML page as follows:
 
-### **1️⃣ Move the `build/` Folder to Your Server**
-After running `npm run build`, copy the `build/` folder to your desired location.
+### **Create an HTML Page & Include the Script**
 
-### **2️⃣ Create an HTML Page & Include the Script**
+I have added 2 files poll.html and poll2.html which has its own set of options you can have your more html files for testing other options
 
-I have added 2 files poll.html and poll2.html which has its own set of options
+poll.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +68,6 @@ I have added 2 files poll.html and poll2.html which has its own set of options
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Now PollWidget is globally available and can be used here
             PollWidget.render({
                 elementId: "poll-container",
                 pollId: "poll1",
@@ -86,29 +85,45 @@ I have added 2 files poll.html and poll2.html which has its own set of options
 
 ```
 
-### **3️⃣ Open the HTML File in a Browser**
-Simply double-click the `index.html` file or serve it using:
-```sh
-npx serve -s build
+![image](https://github.com/user-attachments/assets/c51a82a7-e3f4-42e8-b6c8-579b07379414)
+
+poll2.html
+
 ```
-Then open `http://localhost:3000` in your browser.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Poll Widget for Opinary</title>
+    <script type="module" defer src="dist/assets/index-BAhiqljR.js"></script>
+    <link rel="stylesheet" href="dist/assets/index-C5EU6OpA.css">
+</head>
+<body>
 
----
+    <div style="width: 50%;margin:auto" id="poll-container"></div>
 
-## 🛠️ Configuration
-The widget reads configuration from **data attributes** on the `#root` element:
-```html
-<div id="root" data-config='{"pollId": "1", "question": "Your question here", "options": ["Option 1", "Option 2", "Option 3"]}'></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            PollWidget.render({
+                elementId: "poll-container",
+                pollId: "poll2",
+                question: "How you like the Opinary test:",
+                options: ["It was great and so challenging.", "Not bad, but you can improve.", "It was a nightmare, never again."]
+            });
+        });
+    </script>
+</body>
+</html>
+
 ```
+![image](https://github.com/user-attachments/assets/b1e88634-9a4b-4c58-adf1-df563fcc037f)
 
-### **Available Configurations:**
-| Attribute    | Type   | Description |
-|-------------|--------|-------------|
-| `pollId`    | String | Unique identifier for the poll |
-| `question`  | String | The poll question |
-| `options`   | Array  | List of answer choices |
 
----
+### **3️⃣ Open the HTML File in a Browser using Live Server available in vs code**
+
+so it will open on http://127.0.0.1:5500/poll.html and http://127.0.0.1:5500/poll2.html and this have its own polls with set of options provided in html with each storing it's votes in localstorage.
+![image](https://github.com/user-attachments/assets/1ed734be-fda3-4b2f-b207-adf9dbb73e74)
 
 ## 🧪 Running Unit Tests
 This project includes unit tests for the poll widget. To run the tests, use:
@@ -117,9 +132,4 @@ npm test
 ```
 Make sure `jest` and `react-testing-library` are installed.
 
-
-## 📝 Author
-Developed by **Divya Gavandi**
-
-For any issues or improvements, feel free to open an **issue** or **pull request**! 🎉
 
