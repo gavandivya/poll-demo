@@ -92,7 +92,7 @@ poll.html
 
 poll2.html
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
