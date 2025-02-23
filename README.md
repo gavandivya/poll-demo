@@ -33,6 +33,7 @@ npm install
 npm run dev
 ```
 This will start the app at `http://localhost:5173/`.
+
 ![image](https://github.com/user-attachments/assets/1ed734be-fda3-4b2f-b207-adf9dbb73e74)
 
 
