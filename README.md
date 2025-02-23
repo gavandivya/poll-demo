@@ -33,6 +33,8 @@ npm install
 npm run dev
 ```
 This will start the app at `http://localhost:5173/`.
+![image](https://github.com/user-attachments/assets/1ed734be-fda3-4b2f-b207-adf9dbb73e74)
+
 
 ### **4️⃣ Build for Production**
 To generate a **minified version** of the poll widget, run:
@@ -123,7 +125,6 @@ poll2.html
 ### **3️⃣ Open the HTML File in a Browser using Live Server available in vs code**
 
 so it will open on http://127.0.0.1:5500/poll.html and http://127.0.0.1:5500/poll2.html and this have its own polls with set of options provided in html with each storing it's votes in localstorage.
-![image](https://github.com/user-attachments/assets/1ed734be-fda3-4b2f-b207-adf9dbb73e74)
 
 ## 🧪 Running Unit Tests
 This project includes unit tests for the poll widget. To run the tests, use:
