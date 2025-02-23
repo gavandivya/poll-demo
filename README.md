@@ -12,7 +12,7 @@ This is a simple and customizable **React-based poll widget** that can be embedd
 - 🔄 **Responsive Design** using Tailwind CSS
 - ⚡ **Multiple Polls on a Page** (but prevents duplicate polls)
 - ✅ **Unit Tested**
-- 📜 **Easy to Embed in Any HTML Page**
+- 📜 **Easy to Embed in Any HTML Page with it's own set of options**
 
 ---
 
